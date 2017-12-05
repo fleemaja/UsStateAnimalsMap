@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State Animals</title>
+    <style>
+      html {
+        background: #F9F9FA;
+        text-align: center;
+        font-family: sans-serif;
+      }
+
+      .info-header {
+        background: white;
+        font-size: 16px;
+        margin: 0;
+        padding: 5px;
+        border-radius: 2px;
+        color: #111;
+      }
+
+      .states {
+        fill: #fff;
+        stroke: #555;
+        cursor: pointer;
+      }
+
+      .noAnimalStates {
+        fill: #999;
+        cursor: default;
+      }
+
+      .states:hover {
+        fill: orange;
+      }
+
+      .noAnimalStates:hover {
+        fill: #777;
+        cursor: default;
+      }
+
+      .state-borders {
+        fill: none;
+        stroke: #555;
+        stroke-width: 1px;
+        stroke-linejoin: round;
+        stroke-linecap: round;
+        pointer-events: none;
+      }
+
+      .tooltip {
+        position: absolute;
+        text-align: center;
+        width: auto;
+        height: auto;
+        padding: 12px;
+        font: 14px sans-serif;
+        background: #111;
+        color: white;
+        border: 0px;
+        border-radius: 2px;
+        pointer-events: none;
+      }
+
+      a {
+        text-decoration: none;
+        color: #222;
+        /*background: rgba(0,0,0,0.05);*/
+        font-size: 18px;
+        border-radius: 2px;
+        border-bottom: 1px solid gray;
+      }
+
+      .highlight {
+        transition: all 0.2s;
+        /*border-bottom:2px solid white;*/
+        position: absolute;
+        top:0;
+        background: white;
+        left:0;
+        z-index: -1;
+        border-radius:2px;
+        display: block;
+        box-shadow: 0 0 30px rgb(255,140,0);
+      }
+
+      .menu {
+        padding: 0;
+        display: flex;
+        list-style: none;
+        justify-content: center;
+        margin: 0;
+      }
+
+      .menu a {
+        display: inline-block;
+        padding:5px;
+        margin:0 20px;
+        color:black;
+      }
+
+      td {
+        padding: 0 10px;
+      }
+
+      .wiki-link {
+        margin: 80px 0px 40px 0;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <nav>
+      <ul class="menu">
+        <li><a href="#" class="category" id="mammals">Mammals</a></li>
+        <li><a href="#" class="category" id="amphibians">Amphibians</a></li>
+        <li><a href="#" class="category" id="birds">Birds</a></li>
+        <li><a href="#" class="category" id="reptiles">Reptiles</a></li>
+        <li><a href="#" class="category" id="insects">Insects</a></li>
+        <li><a href="#" class="category" id="fish">Fish</a></li>
+        <li><a href="#" class="category" id="crustaceans">Crustaceans</a></li>
+      </ul>
+    </nav>
+
+    <svg width="960" height="600"></svg>
+
+    <div class="wiki-link">
+      <span>Learn more about the U.S. state animals on </span>
+      <a href="https://en.wikipedia.org/wiki/Lists_of_U.S._state_animals" target="_blank">
+        Wikipedia
+      </a>
+    </div>
+
+    <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>
+    <script language="javascript" type="text/javascript" src="https://d3js.org/topojson.v2.min.js"></script>
+    <script language="javascript" type="text/javascript" src="index.js"></script>
+  </body>
+</html>
